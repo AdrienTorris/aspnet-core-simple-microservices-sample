@@ -1,0 +1,17 @@
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Activities\bin\Debug\netcoreapp2.1\Actio.Services.Activities.deps.json
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Activities\bin\Debug\netcoreapp2.1\Actio.Services.Activities.runtimeconfig.json
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Activities\bin\Debug\netcoreapp2.1\Actio.Services.Activities.runtimeconfig.dev.json
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Activities\bin\Debug\netcoreapp2.1\Actio.Services.Activities.dll
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Activities\bin\Debug\netcoreapp2.1\Actio.Services.Activities.pdb
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Activities\bin\Debug\netcoreapp2.1\Actio.Common.dll
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Activities\bin\Debug\netcoreapp2.1\Actio.Common.pdb
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Activities\obj\Debug\netcoreapp2.1\Actio.Services.Activities.csprojAssemblyReference.cache
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Activities\obj\Debug\netcoreapp2.1\Actio.Services.Activities.csproj.CoreCompileInputs.cache
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Activities\obj\Debug\netcoreapp2.1\Actio.Services.Activities.RazorAssemblyInfo.cache
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Activities\obj\Debug\netcoreapp2.1\Actio.Services.Activities.RazorAssemblyInfo.cs
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Activities\obj\Debug\netcoreapp2.1\Actio.Services.Activities.AssemblyInfoInputs.cache
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Activities\obj\Debug\netcoreapp2.1\Actio.Services.Activities.AssemblyInfo.cs
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Activities\obj\Debug\netcoreapp2.1\Actio.Services.Activities.RazorTargetAssemblyInfo.cache
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Activities\obj\Debug\netcoreapp2.1\Actio.Services.Activities.csproj.CopyComplete
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Activities\obj\Debug\netcoreapp2.1\Actio.Services.Activities.dll
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Activities\obj\Debug\netcoreapp2.1\Actio.Services.Activities.pdb
