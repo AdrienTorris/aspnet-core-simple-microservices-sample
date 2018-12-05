@@ -34,7 +34,7 @@ namespace Actio.Services.Activities
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            services.AddLogging(builder=>
+            services.AddLogging(builder =>
             {
                 builder.AddConfiguration(Configuration.GetSection("Logging"))
                 .AddConsole()
@@ -45,14 +45,14 @@ namespace Actio.Services.Activities
 
             services.AddRabbitMq(Configuration);
 
-            services.AddTransient<ICommandHandler<CreateActivity>,CreateActivityHandler>();
+            services.AddTransient<ICommandHandler<CreateActivity>, CreateActivityHandler>();
 
             services.AddTransient<IActivityRepository, ActivityRepository>();
             services.AddTransient<ICategoryRepository, CategoryRepository>();
 
             services.AddTransient<IDatabaseSeeder, ActivityMongoSeeder>();
 
-            services.AddScoped<IActivityService, ActivityService>();
+            services.AddTransient<IActivityService, ActivityService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

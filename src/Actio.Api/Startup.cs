@@ -17,6 +17,7 @@
     using Actio.Common.Services;
     using Actio.Common.RabbitMq;
     using Actio.Api.Handlers;
+    using Actio.Common.Auth;
 
     public class Startup
     {
@@ -32,10 +33,23 @@
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            services.AddLogging(builder=>
+            {
+                builder.AddConfiguration(Configuration.GetSection("Logging"))
+                .AddConsole()
+                .AddDebug();
+            });
+
+            services.AddJwt(Configuration);
+            
             services.AddRabbitMq(Configuration);
 
             services.AddTransient<
                 IEventHandler<ActivityCreated>,ActivityCreatedHandler>();
+            services.AddTransient<
+                IEventHandler<UserAuthenticated>,UserAuthenticatedHandler>();
+            services.AddTransient<
+                IEventHandler<UserCreated>,UserCreatedHandler>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

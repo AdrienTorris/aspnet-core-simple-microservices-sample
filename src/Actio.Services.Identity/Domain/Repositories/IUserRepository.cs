@@ -1,9 +1,8 @@
 namespace Actio.Services.Identity.Domain.Repositories
 {
+    using Actio.Services.Identity.Domain.Models;
     using System;
     using System.Threading.Tasks;
-    using Actio.Common.Exceptions;
-    using Actio.Services.Identity.Domain.Models;
 
     public interface IUserRepository
     {

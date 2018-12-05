@@ -1,14 +1,13 @@
 namespace Actio.Services.Activities.Handlers
 {
     using Actio.Common.Commands;
-    using RawRabbit;
-    using Actio.Common.RabbitMq;
-    using System.Threading.Tasks;
-    using System;
     using Actio.Common.Events;
-    using Actio.Services.Activities.Services;
     using Actio.Common.Exceptions;
+    using Actio.Services.Activities.Services;
     using Microsoft.Extensions.Logging;
+    using RawRabbit;
+    using System;
+    using System.Threading.Tasks;
 
     public class CreateActivityHandler : ICommandHandler<CreateActivity>
     {
@@ -19,13 +18,13 @@ namespace Actio.Services.Activities.Handlers
         public CreateActivityHandler(IBusClient busClient, IActivityService activityService,
             ILogger<CreateActivityHandler> logger)
         {
-            this._busClient=busClient;
-            this.activityService=activityService;
+            this._busClient = busClient;
+            this.activityService = activityService;
             this.logger = logger;
         }
 
-        public async Task HandleAsync(CreateActivity command){
-
+        public async Task HandleAsync(CreateActivity command)
+        {
             Console.WriteLine($"Creating activity: {command.Category} {command.Name}");
             this.logger.LogInformation($"Creating activity: {command.Category} {command.Name}");
 
@@ -37,19 +36,19 @@ namespace Actio.Services.Activities.Handlers
                 await this._busClient.PublishAsync(new ActivityCreated(command.Id,
                     command.UserId, command.Category, command.Name));
 
-                    return;
+                return;
             }
-            catch(ActioException ex)
+            catch (ActioException ex)
             {
                 await this._busClient.PublishAsync(
-                    new CreateActivityRejected(command.Id, ex.Code, ex.Message)); 
+                    new CreateActivityRejected(command.Id, ex.Code, ex.Message));
 
                 this.logger.LogError(ex.Message);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 await this._busClient.PublishAsync(
-                    new CreateActivityRejected(command.Id, "error", ex.Message)); 
+                    new CreateActivityRejected(command.Id, "error", ex.Message));
 
                 this.logger.LogError(ex.Message);
             }

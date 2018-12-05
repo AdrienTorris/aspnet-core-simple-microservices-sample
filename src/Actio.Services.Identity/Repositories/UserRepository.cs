@@ -1,9 +1,9 @@
-using System;
-using System.Threading.Tasks;
 using Actio.Services.Identity.Domain.Models;
 using Actio.Services.Identity.Domain.Repositories;
 using MongoDB.Driver;
 using MongoDB.Driver.Linq;
+using System;
+using System.Threading.Tasks;
 
 namespace Actio.Services.Identity.Repositories
 {
