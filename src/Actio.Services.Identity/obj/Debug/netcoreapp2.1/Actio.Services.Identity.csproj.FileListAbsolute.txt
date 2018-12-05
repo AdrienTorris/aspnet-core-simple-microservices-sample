@@ -1,0 +1,17 @@
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Identity\bin\Debug\netcoreapp2.1\Actio.Services.Identity.deps.json
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Identity\bin\Debug\netcoreapp2.1\Actio.Services.Identity.runtimeconfig.json
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Identity\bin\Debug\netcoreapp2.1\Actio.Services.Identity.runtimeconfig.dev.json
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Identity\bin\Debug\netcoreapp2.1\Actio.Services.Identity.dll
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Identity\bin\Debug\netcoreapp2.1\Actio.Services.Identity.pdb
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Identity\bin\Debug\netcoreapp2.1\Actio.Common.dll
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Identity\bin\Debug\netcoreapp2.1\Actio.Common.pdb
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Identity\obj\Debug\netcoreapp2.1\Actio.Services.Identity.csprojAssemblyReference.cache
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Identity\obj\Debug\netcoreapp2.1\Actio.Services.Identity.csproj.CoreCompileInputs.cache
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Identity\obj\Debug\netcoreapp2.1\Actio.Services.Identity.RazorAssemblyInfo.cache
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Identity\obj\Debug\netcoreapp2.1\Actio.Services.Identity.RazorAssemblyInfo.cs
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Identity\obj\Debug\netcoreapp2.1\Actio.Services.Identity.AssemblyInfoInputs.cache
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Identity\obj\Debug\netcoreapp2.1\Actio.Services.Identity.AssemblyInfo.cs
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Identity\obj\Debug\netcoreapp2.1\Actio.Services.Identity.RazorTargetAssemblyInfo.cache
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Identity\obj\Debug\netcoreapp2.1\Actio.Services.Identity.csproj.CopyComplete
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Identity\obj\Debug\netcoreapp2.1\Actio.Services.Identity.dll
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Services.Identity\obj\Debug\netcoreapp2.1\Actio.Services.Identity.pdb

@@ -13,6 +13,10 @@ using Microsoft.Extensions.Options;
 using Actio.Common.Commands;
 using Actio.Common.RabbitMq;
 using Actio.Services.Activities.Handlers;
+using Actio.Common.Mongo;
+using Actio.Services.Activities.Domain.Repositories;
+using Actio.Services.Activities.Repositories;
+using Actio.Services.Activities.Services;
 
 namespace Actio.Services.Activities
 {
@@ -30,9 +34,25 @@ namespace Actio.Services.Activities
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            services.AddLogging(builder=>
+            {
+                builder.AddConfiguration(Configuration.GetSection("Logging"))
+                .AddConsole()
+                .AddDebug();
+            });
+
+            services.AddMongoDb(Configuration);
+
             services.AddRabbitMq(Configuration);
 
             services.AddTransient<ICommandHandler<CreateActivity>,CreateActivityHandler>();
+
+            services.AddTransient<IActivityRepository, ActivityRepository>();
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
+
+            services.AddTransient<IDatabaseSeeder, ActivityMongoSeeder>();
+
+            services.AddScoped<IActivityService, ActivityService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,6 +67,9 @@ namespace Actio.Services.Activities
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            var seeder = app.ApplicationServices.GetService<IDatabaseSeeder>();
+            app.ApplicationServices.GetService<IDatabaseInitializer>().InitializeAsync(seeder);
 
             //app.UseHttpsRedirection();
             app.UseMvc();
