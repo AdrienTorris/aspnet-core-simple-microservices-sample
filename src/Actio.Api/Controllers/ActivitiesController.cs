@@ -5,6 +5,8 @@ namespace Actio.Api.Controllers
      using System;
      using Actio.Common.Commands;
      using System.Threading.Tasks;
+    using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Authentication.JwtBearer;
 
     [Route("[controller]")]
     public class ActivitiesController : Controller
@@ -28,5 +30,9 @@ namespace Actio.Api.Controllers
 
             return Accepted($"activities/{command.Id}");
         }
+
+        [HttpGet("")]
+        [Authorize(AuthenticationSchemes= JwtBearerDefaults.AuthenticationScheme)]
+        public IActionResult Get() => Content("Secured");
     }
 }

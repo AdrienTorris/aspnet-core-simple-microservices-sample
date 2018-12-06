@@ -15,3 +15,4 @@ C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Api\obj\Debug\netcoreapp2.1\A
 C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Api\obj\Debug\netcoreapp2.1\Actio.Api.csproj.CopyComplete
 C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Api\obj\Debug\netcoreapp2.1\Actio.Api.dll
 C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Api\obj\Debug\netcoreapp2.1\Actio.Api.pdb
+C:\Users\AdrienTorris\source\repos\Actio\src\Actio.Api\bin\Debug\netcoreapp2.1\Actio.Api.exe

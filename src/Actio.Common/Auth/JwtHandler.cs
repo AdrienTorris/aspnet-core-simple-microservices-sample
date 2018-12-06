@@ -33,8 +33,10 @@ namespace Actio.Common.Auth
         {
             var nowUtc = DateTime.Now;
             var expires = nowUtc.AddMinutes(this.options.ExpiryMinutes);
-            var centuryBegin = new DateTime(1978,1,1).ToUniversalTime();
-            var exp = (long)(new TimeSpan(expires.Ticks - centuryBegin.Ticks).TotalSeconds);
+            // var centuryBegin = nowUtc.AddYears(100 * -1).ToUniversalTime();
+            var centuryBegin = new DateTime(1989,1,1).ToUniversalTime();
+            //var exp = (long)(new TimeSpan(expires.Ticks - centuryBegin.Ticks).TotalSeconds);
+            var exp = ((DateTimeOffset)expires).ToUnixTimeSeconds();
             var now = (long)(new TimeSpan(nowUtc.Ticks - centuryBegin.Ticks).TotalSeconds);
             var payload = new JwtPayload
             {

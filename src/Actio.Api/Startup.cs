@@ -31,6 +31,8 @@
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            Microsoft.IdentityModel.Logging.IdentityModelEventSource.ShowPII = true;
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddLogging(builder=>
