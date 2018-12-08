@@ -18,6 +18,8 @@
     using Actio.Common.RabbitMq;
     using Actio.Api.Handlers;
     using Actio.Common.Auth;
+    using Actio.Api.Repositories;
+    using Actio.Common.Mongo;
 
     public class Startup
     {
@@ -43,15 +45,16 @@
             });
 
             services.AddJwt(Configuration);
+
+            services.AddMongoDb(Configuration);
             
             services.AddRabbitMq(Configuration);
 
-            services.AddTransient<
-                IEventHandler<ActivityCreated>,ActivityCreatedHandler>();
-            services.AddTransient<
-                IEventHandler<UserAuthenticated>,UserAuthenticatedHandler>();
-            services.AddTransient<
-                IEventHandler<UserCreated>,UserCreatedHandler>();
+            services.AddTransient<IEventHandler<ActivityCreated>,ActivityCreatedHandler>();
+            services.AddTransient<IEventHandler<UserAuthenticated>,UserAuthenticatedHandler>();
+            services.AddTransient<IEventHandler<UserCreated>,UserCreatedHandler>();
+
+            services.AddTransient<IActivityRepository,ActivityRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

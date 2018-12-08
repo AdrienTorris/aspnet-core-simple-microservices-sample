@@ -1,13 +1,13 @@
 namespace Actio.Common.Services
 {
-    using System;
+    using Actio.Common.Commands;
+    using Actio.Common.Events;
+    using Actio.Common.RabbitMq;
     using Microsoft.AspNetCore;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;
-    using Actio.Common.Commands;
-    using Actio.Common.Events;
     using RawRabbit;
-    using Actio.Common.RabbitMq;
+    using System;
 
     public class ServiceHost : IServiceHost
     {

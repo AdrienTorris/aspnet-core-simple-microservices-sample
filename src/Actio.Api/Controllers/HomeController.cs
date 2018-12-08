@@ -6,6 +6,6 @@ namespace Actio.Api.Controllers
     public class HomeController : Controller
     {
         [HttpGet("")]
-        public IActionResult GetAction() => Content("Hi!");
+        public IActionResult Get() => Content("Hi!");
     }
 }

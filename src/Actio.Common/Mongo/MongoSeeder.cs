@@ -1,8 +1,8 @@
 namespace Actio.Common.Mongo
 {
-    using System.Threading.Tasks;
     using MongoDB.Driver;
     using System.Linq;
+    using System.Threading.Tasks;
 
     public class MongoSeeder : IDatabaseSeeder
     {
